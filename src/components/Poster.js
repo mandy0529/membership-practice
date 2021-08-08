@@ -44,6 +44,9 @@ const Title = styled.span`
   font-weight: bold;
   margin: 3px;
 `;
+const Span = styled.span`
+  padding-right: 4px;
+`;
 const Poster = ({id, title, year, rating, imgUrl, isMovie = false}) => {
   return (
     <Link to={isMovie ? `/movie/${id}` : `/tv/${id}`}>
@@ -57,9 +60,9 @@ const Poster = ({id, title, year, rating, imgUrl, isMovie = false}) => {
             }
           />
           <Rating>
-            <span role="img" aria-label="rating">
+            <Span role="img" aria-label="rating">
               ⭐️
-            </span>
+            </Span>
             {rating} / 10
           </Rating>
         </ImageContainer>
@@ -74,7 +77,7 @@ const Poster = ({id, title, year, rating, imgUrl, isMovie = false}) => {
 
 Poster.propTypes = {
   title: PropTypes.string.isRequired,
-  year: PropTypes.number,
+  year: PropTypes.string,
   rating: PropTypes.number,
   imgUrl: PropTypes.string,
   id: PropTypes.number.isRequired,

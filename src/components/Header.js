@@ -2,13 +2,14 @@ import {Link, withRouter} from 'react-router-dom';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-  margin: 15px 10px;
   display: flex;
+  align-items: center;
   background-color: rgba(20, 20, 20, 0.8);
+  height: 50px;
+  margin: 10px;
 `;
 const List = styled.li`
-  padding: 10px 15px;
-  margin-bottom: 30px;
+  padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
   transition: all 300ms ease-in-out;

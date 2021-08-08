@@ -6,7 +6,9 @@ import Loader from '../../components/Loader';
 import Msg from '../../components/Msg';
 import Poster from '../../components/Poster';
 
-const Container = styled.div``;
+const Container = styled.div`
+  margin: 20px;
+`;
 
 const HomePresenter = ({nowPlaying, upcoming, popular, error, loading}) => {
   return loading ? (

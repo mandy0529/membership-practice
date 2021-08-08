@@ -38,7 +38,7 @@ class DetailContainer extends React.Component {
     } catch (error) {
       this.setState({error: "can't find any detail"});
     } finally {
-      this.setState({loading: false});
+      this.setState({loading: false, detail});
     }
   }
 

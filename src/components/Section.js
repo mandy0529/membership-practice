@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
+  margin: 20px 0;
   :not(:last-child) {
     margin-bottom: 60px;
   }
