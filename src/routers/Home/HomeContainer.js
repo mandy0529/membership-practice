@@ -14,9 +14,15 @@ class HomeContainer extends React.Component {
   async componentDidMount() {
     try {
       const {
-        data: {results},
+        data: {results: nowPlaying},
       } = await moviesApi.nowPlaying();
-      console.log(results);
+      const {
+        data: {results: popular},
+      } = await moviesApi.popular();
+      const {
+        data: {results: upcoming},
+      } = await moviesApi.upcoming();
+      this.setState({nowPlaying, popular, upcoming});
     } catch (error) {
       this.setState({error: "can't find anything"});
     } finally {
@@ -25,6 +31,7 @@ class HomeContainer extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     const {nowPlaying, upcoming, popular, error, loading, search} = this.state;
     return (
       <HomePresenter

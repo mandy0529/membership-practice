@@ -14,7 +14,8 @@ function Router() {
         <Route path="/" exact={true} component={Home} />
         <Route path="/search" exact={true} component={Search} />
         <Route path="/show" exact={true} component={Show} />
-        <Route path="/detail" exact={true} component={Detail} />
+        <Route path="/movie/:id" exact={true} component={Detail} />
+        <Route path="/tv/:id" exact={true} component={Detail} />
         <Redirect from="*" to="/" />
       </Switch>
     </HashRouter>

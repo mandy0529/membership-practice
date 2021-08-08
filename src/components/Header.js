@@ -22,11 +22,11 @@ function Header({location: {pathname}}) {
       <List current={pathname === '/'}>
         <Link to="/">Home</Link>
       </List>
-      <List current={pathname === '/search'}>
-        <Link to="/search">Search</Link>
-      </List>
       <List current={pathname === '/show'}>
         <Link to="/show">Shows</Link>
+      </List>
+      <List current={pathname === '/search'}>
+        <Link to="/search">Search</Link>
       </List>
     </Ul>
   );
