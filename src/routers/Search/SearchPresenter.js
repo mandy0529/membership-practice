@@ -5,6 +5,7 @@ import Loader from '../../components/Loader';
 import Section from '../../components/Section';
 import Msg from '../../components/Msg';
 import Poster from '../../components/Poster';
+import Helmet from 'react-helmet';
 
 const Container = styled.div`
   padding: 20px 30px;
@@ -37,6 +38,9 @@ const SearchPresenter = ({
           onChange={updateSubmit}
         />
       </Form>
+      <Helmet>
+        <title>search | minjiflex</title>
+      </Helmet>
       {loading ? (
         <Loader />
       ) : (

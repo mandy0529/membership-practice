@@ -13,17 +13,20 @@ class DetailContainer extends React.Component {
       error: null,
       loading: true,
       isMovie: pathname.includes('/movie/'),
+      numberId: null,
     };
   }
   async componentDidMount() {
     const {
       match: {
         params: {id},
+        path,
       },
       history: {push},
     } = this.props;
+    console.log(this.props, '이건 프룹');
     const {isMovie} = this.state;
-    const numberId = Number(id);
+    let numberId = Number(id);
     if (isNaN(numberId)) {
       return push('/');
     }
@@ -38,7 +41,7 @@ class DetailContainer extends React.Component {
     } catch (error) {
       this.setState({error: "can't find any detail"});
     } finally {
-      this.setState({loading: false, detail});
+      this.setState({loading: false, detail, path, numberId});
     }
   }
 

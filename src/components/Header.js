@@ -15,6 +15,9 @@ const List = styled.li`
   transition: all 300ms ease-in-out;
   border-bottom: 5px solid
     ${(props) => (props.current ? 'white' : 'transparent')};
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 function Header({location: {pathname}}) {

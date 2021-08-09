@@ -7,6 +7,12 @@ const api = axios.create({
     language: 'en-US',
   },
 });
+const basicApi = axios.create({
+  baseURL: 'https://api.themoviedb.org/3/',
+  params: {
+    api_key: '6e5e83e40bbc960162e2fcf42a1d5b9f',
+  },
+});
 export const moviesApi = {
   nowPlaying: () => api.get('movie/now_playing'),
   upcoming: () => api.get('movie/upcoming'),
@@ -41,6 +47,10 @@ export const showApi = {
         query: encodeURI(word),
       },
     }),
+};
+
+export const companyApi = {
+  company: (id) => basicApi.get(`company/${id}`),
 };
 
 export default api;
