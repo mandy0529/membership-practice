@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/membership-practice/static/js/main.ec7b2c0e.chunk.js",
+    "main.js.map": "/membership-practice/static/js/main.ec7b2c0e.chunk.js.map",
+    "runtime-main.js": "/membership-practice/static/js/runtime-main.cde1f718.js",
+    "runtime-main.js.map": "/membership-practice/static/js/runtime-main.cde1f718.js.map",
+    "static/js/2.c007f951.chunk.js": "/membership-practice/static/js/2.c007f951.chunk.js",
+    "static/js/2.c007f951.chunk.js.map": "/membership-practice/static/js/2.c007f951.chunk.js.map",
+    "index.html": "/membership-practice/index.html",
+    "static/js/2.c007f951.chunk.js.LICENSE.txt": "/membership-practice/static/js/2.c007f951.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cde1f718.js",
+    "static/js/2.c007f951.chunk.js",
+    "static/js/main.ec7b2c0e.chunk.js"
+  ]
+}
