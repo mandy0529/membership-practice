@@ -98,7 +98,7 @@ const Br = styled.div`
 const EachSeason = styled.div`
   opacity: 0;
 `;
-const Season = styled.div`
+const Season = styled.button`
   cursor: pointer;
   transition: all 300ms ease-in;
   margin: 0 10px;
@@ -106,21 +106,31 @@ const Season = styled.div`
   width: 120px;
   height: 40px;
   border: 4px solid white;
+  background-color: transparent;
+  color: white;
   text-align: center;
   padding-top: 3px;
   font-size: 25px;
   font-weight: bold;
+`;
+const SSC = styled.div`
+  display: flex;
+  align-items: center;
   &:hover {
-    background-color: white;
-    color: black;
-    text-align: center;
+    ${Season} {
+      background-color: white;
+      color: black;
+    }
     ${EachSeason} {
       opacity: 1;
     }
   }
 `;
-const SSC = styled.div`
+const SeasonPoster = styled.div`
   display: flex;
+  background-image: url(${(props) => props.posterImg});
+  background-size: cover;
+  background-position: center center;
 `;
 
 const DetailPresenter = ({detail, error, loading, path}) => {
@@ -166,6 +176,11 @@ const DetailPresenter = ({detail, error, loading, path}) => {
                           : `${season.name} / `
                       )}
                   </EachSeason>
+                  <SeasonPoster
+                    posterImg={`https://image.tmdb.org/t/p/w300/${detail.seasons.poster_path}`}
+                  >
+                    {detail.seasons.map((season) => season.poster_path)}
+                  </SeasonPoster>
                 </SSC>
               </FirstContainer>
               <DataContainer>
@@ -188,8 +203,8 @@ const DetailPresenter = ({detail, error, loading, path}) => {
                   {detail.runtime ? detail.runtime : detail.episode_run_time}{' '}
                   min
                 </Item>
-                <Divider> · </Divider>
                 <Br></Br>
+                <Divider> · </Divider>
                 <Item>
                   {detail.genres &&
                     detail.genres.map((genre, index) =>
