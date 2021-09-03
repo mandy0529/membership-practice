@@ -9,6 +9,7 @@ a {
 }
 * {
     box-sizing:border-box;
+    background-color:teal;
 }
 body {
     font-size:18px;

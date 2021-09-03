@@ -126,12 +126,6 @@ const SSC = styled.div`
     }
   }
 `;
-const SeasonPoster = styled.div`
-  display: flex;
-  background-image: url(${(props) => props.posterImg});
-  background-size: cover;
-  background-position: center center;
-`;
 
 const DetailPresenter = ({detail, error, loading, path}) => {
   return (
@@ -176,11 +170,6 @@ const DetailPresenter = ({detail, error, loading, path}) => {
                           : `${season.name} / `
                       )}
                   </EachSeason>
-                  <SeasonPoster
-                    posterImg={`https://image.tmdb.org/t/p/w300/${detail.seasons.poster_path}`}
-                  >
-                    {detail.seasons.map((season) => season.poster_path)}
-                  </SeasonPoster>
                 </SSC>
               </FirstContainer>
               <DataContainer>
