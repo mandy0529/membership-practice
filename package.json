@@ -21,9 +21,7 @@
     "start": "react-scripts start",
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy":"gh-pages -d build",
-    "predeploy":"yarn run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -31,7 +29,6 @@
       "react-app/jest"
     ]
   },
-  "homepage":"https://mandy0529.github.io/membership-practice",
   "browserslist": {
     "production": [
       ">0.2%",
